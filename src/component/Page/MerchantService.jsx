@@ -50,60 +50,54 @@ const MerchantService = () => {
 
     return (
         <div className="w-full px-5 pb-10 bg-white">
-            <div className="relative w-full h-[700px] overflow-hidden" data-aos="fade-up">
-                <div className="absolute top-32 inset-0 bg-transparent">
-                    <div className='flex px-20 gap-40'>
-                        <div className='w-2/5 flex flex-col justify-center gap-5 ml-3'>
-                            <div className="text-pink-400 text-6xl font-serif font-semibold">
-                                Tiết kiệm cùng với <span className="text-blue-900 ">Zota</span>
+            <div className="relative w-full min-h-screen flex flex-col items-center" data-aos="fade-up">
+                <div className="relative top-32 px-5 md:px-20 flex flex-col md:flex-row gap-10 md:gap-40">
+                    <div className="w-full md:w-2/5 flex flex-col justify-center gap-5">
+                        <div className="text-pink-400 text-4xl md:text-6xl font-serif font-semibold">
+                            Tiết kiệm cùng với <span className="text-blue-900">Zota</span>
+                        </div>
+                        <div className="flex gap-4 md:gap-8 mt-5">
+                            <div className="bg-pink-400 px-6 py-2 md:px-8 md:py-3 rounded-2xl text-sm md:text-base font-extrabold hover:bg-blue-900 cursor-pointer">
+                                Get Started
                             </div>
-                            <div className=' flex gap-8 mt-5'>
-                                <div className=' bg-pink-400 px-8 py-3 rounded-2xl flex items-center text-base font-sans font-extrabold hover:bg-blue-900 cursor-pointer'>
-                                    Get Started
-                                </div>
-                                <div className="border-2 border-pink-400 px-8 py-3  bg-white text-black rounded-2xl flex items-center text-base font-sans font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
-                                    Check Pricing
-                                </div>
+                            <div className="border-2 border-pink-400 px-6 py-2 md:px-8 md:py-3 bg-white text-black rounded-2xl text-sm md:text-base font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
+                                Check Pricing
                             </div>
                         </div>
-                        <div className="flex justify-center items-center">
-                            <motion.img
-                                src={merchantA920}
-                                alt="Zoomable"
-                                className="w-[500px] h-96"
-                                initial={{ scale: 1 }}
-                                animate={{ scale: isZoomed ? 2 : 1 }}
-                                transition={{ duration: 10, ease: "easeInOut" }}
-                            />
-                        </div>
-
                     </div>
-                    <div className="absolute left-3/8 ">
-                        {images.map((item, i) => (
-                            <div key={i} className="absolute flex w-[150px] gap-5 items-center">
-                                <motion.img
-                                    src={item.src}
-                                    className="w-2xl"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: i === index ? 1 : 0 }}
-                                    transition={{ duration: 0.5 }}
-                                />
-                                <motion.p
-                                    className="mt-2 text-xl text-pink-400 font-semibold font-serif text-center"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: i === index ? 1 : 0 }}
-                                    transition={{ duration: 0.5 }}
-                                >
-                                    {item.text}
-                                </motion.p>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 flex flex-col justify-center items-center">
-
+                    <div className="flex justify-center mt-20 items-center">
+                        <motion.img
+                            src={merchantA920}
+                            alt="Zoomable"
+                            className="w-[250px] md:w-[500px] h-auto"
+                            initial={{ scale: 1 }}
+                            animate={{ scale: isZoomed ? 2 : 1 }}
+                            transition={{ duration: 10, ease: "easeInOut" }}
+                        />
                     </div>
                 </div>
+
+                <div className="relative w-full mt-10 md:mt-30">
+                    {images.map((item, i) => (
+                        <motion.div
+                            key={i}
+                            className="absolute left-1/2 transform -translate-x-1/2 w-[150px] md:w-[200px] flex flex-col items-center z-10"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: i === index ? 1 : 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <motion.img
+                                src={item.src}
+                                className="w-full"
+                            />
+                            <motion.p className="mt-2 text-sm md:text-xl text-pink-400 font-semibold font-serif text-center">
+                                {item.text}
+                            </motion.p>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
+
             <div className='flex flex-col gap-2 mt-10 rounded-2xl shadow-xl ' data-aos="fade-up">
                 <SlideLogoTop />
             </div>

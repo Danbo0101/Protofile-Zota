@@ -103,7 +103,7 @@ const HomePage = () => {
 
     return (
         <div className="w-full px-5 bg-white">
-            <div className="relative w-full h-[800px] overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative w-full min-h-[1000px] md:min-h-[900px] lg:min-h-[800px]  overflow-hidden rounded-2xl shadow-2xl">
                 <video
                     autoPlay
                     loop
@@ -113,55 +113,60 @@ const HomePage = () => {
                 >
                     <source src={bgHideVideo} type="video/mp4" />
                 </video>
-                <div className="absolute top-15 inset-0 bg-transparent">
-                    <div className='flex w-full justify-between'>
-                        <div className='w-1/3 flex flex-col justify-center gap-5 ml-3'>
-                            <div className='text-pink-400 text-5xl font-serif font-stretch-90% '>
+                <div className="absolute inset-0 bg-transparent flex flex-col items-center justify-center px-6 text-center">
+                    <div className="w-full max-w-8xl flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8">
+                        <div className="w-full lg:w-1/3 flex flex-col lg:items-start justify-center gap-5">
+                            <h2 className="text-pink-400 text-4xl md:text-5xl lg:text-6xl font-serif">
                                 Vượt Trội Hơn
-                            </div>
-                            <div className='text-blue-900 text-5xl font-serif font-semibold'>
+                            </h2>
+                            <h2 className="text-blue-900 text-4xl md:text-5xl lg:text-6xl font-serif font-semibold">
                                 Mỗi Ngày
+                            </h2>
+                            <div className='block sm:hidden'>
+                                <iframe
+                                    className="rounded-2xl w-full aspect-video"
+                                    src="https://player.vimeo.com/video/916024376?autoplay=1&controls=0&loop=1&autopause=0&playsinline=1&muted=1"
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
-                            <div className='flex gap-8 mt-2'>
-                                <div className=' bg-pink-400 px-8 py-2 rounded-2xl flex items-center text-lg font-sans font-extrabold hover:bg-blue-900 cursor-pointer'>
+                            <div className="flex justify-center gap-4 sm:gap-8 mt-4">
+                                <button className="bg-pink-400 px-6 sm:px-8 py-2 rounded-2xl text-lg font-sans font-extrabold hover:bg-blue-900 cursor-pointer">
                                     Get Started
-                                </div>
-                                <div className="border-2 border-pink-400 bg-white text-black px-8 py-2 rounded-2xl flex items-center text-xlg font-sans font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
+                                </button>
+                                <button className="border-2 border-pink-400 bg-white text-black px-6 sm:px-8 py-2 rounded-2xl text-lg font-sans font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
                                     Check Pricing
-                                </div>
+                                </button>
                             </div>
                         </div>
-                        <iframe
-                            className='rounded-l-2xl'
-                            src="https://player.vimeo.com/video/916024376?autoplay=1&controls=0&loop=1&autopause=0&playsinline=1&muted=1"
-                            width="900"
-                            height="510"
-                            frameBorder="0"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            allowFullScreen>
-                        </iframe>
+                        <div className="w-full hidden sm:block md:max-w-4xl lg:max-w-4xl">
+                            <iframe
+                                className="rounded-2xl w-full aspect-video"
+                                src="https://player.vimeo.com/video/916024376?autoplay=1&controls=0&loop=1&autopause=0&playsinline=1&muted=1"
+                                frameBorder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
                     </div>
-                    <div className="flex justify-center items-center py-16">
-                        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-20 px-10">
-                            <div className="bg-white shadow-lg rounded-2xl p-6 text-center hover:shadow-xl transition-shadow">
-                                <h3 className="text-xl font-sans font-bold text-gray-900 mb-2">Quản Lý Thông Minh</h3>
-                                <p className="text-gray-500">Tối ưu quy trình, đơn giản hóa công việc hàng ngày.</p>
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 sm:px-10 py-10">
+                        {[
+                            { title: "Quản Lý Thông Minh", desc: "Tối ưu quy trình, đơn giản hóa công việc hàng ngày." },
+                            { title: "Tiết Kiệm Tối Ưu", desc: "Giảm chi phí vận hành, tăng hiệu suất kinh doanh." },
+                            { title: "Kết Quả Xuất Sắc", desc: "Đạt hiệu suất cao nhất với hệ thống tối ưu." }
+                        ].map((item, index) => (
+                            <div key={index} className="bg-white shadow-lg rounded-2xl p-6 text-center hover:shadow-xl transition-shadow">
+                                <h3 className="text-lg sm:text-xl font-sans font-bold text-gray-900 mb-2">
+                                    {item.title}
+                                </h3>
+                                <p className="text-gray-500 text-sm sm:text-base">{item.desc}</p>
                             </div>
-                            <div className="bg-white shadow-lg rounded-2xl p-6 text-center hover:shadow-xl transition-shadow">
-                                <h3 className="text-xl font-sans font-bold text-gray-900 mb-2">Tiết Kiệm Tối Ưu</h3>
-                                <p className="text-gray-500">Giảm chi phí vận hành, tăng hiệu suất kinh doanh.</p>
-                            </div>
-                            <div className="bg-white shadow-lg rounded-2xl p-6 text-center hover:shadow-xl transition-shadow">
-                                <h3 className="text-xl font-sans font-bold text-gray-900 mb-2">Kết Quả Xuất Sắc</h3>
-                                <p className="text-gray-500">Đạt hiệu suất cao nhất với hệ thống tối ưu.</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-
-
-
             </div>
+
             <div className='flex flex-col gap-2 mt-10 rounded-2xl shadow-xl ' data-aos="fade-up">
                 <SlideLogoTop />
                 <SlideLogoBottom />
@@ -189,43 +194,41 @@ const HomePage = () => {
                 ))}
             </div>
             <div className='flex flex-col items-center justify-center py-20 px-5' data-aos="fade-up">
-                <div className=' flex gap-3 font-serif font-bold text-6xl text-blue-900'>
-                    Thành Tựu của
-                    <p className='text-pink-500'>
-                        ZOTA
-                    </p>
+                <div className=' flex flex-col items-center lg:flex-row gap-3 font-serif font-bold text-5xl lg:text-6xl text-blue-900'>
+                    <span className="whitespace-nowrap">Thành Tựu của</span>
+                    <p className="text-pink-500">ZOTA</p>
                 </div>
-                <p className="text-2xl text-gray-900 py-10 px-30">
+                <p className="text-2xl text-gray-900 py-10 text-center lg:px-30">
                     Trong <span className="font-bold text-pink-500">hơn 10 năm</span> hoạt động,{" "}
                     <span className="font-bold text-pink-500">ZOTA (POS system for nail salons)</span> đã phát triển mạnh mẽ và có mặt tại hơn{" "}
                     <span className="text-pink-500 font-bold">4.000 tiệm</span>{" "}
                     <span className="text-pink-500">(hair salon - restaurant - nail salon)</span> trên 50 tiểu bang trên khắp nước Mỹ.
                 </p>
                 <img src={map} />
-                <div className="flex justify-center items-center py-14 px-40 gap-52 bg-pink-400 text-white rounded-2xl shadow-lg">
+                <div className="flex flex-col lg:flex-row justify-center items-center py-10 px-16 lg:py-14 lg:px-40 gap-16 lg:gap-52 bg-pink-400 text-white rounded-2xl shadow-lg">
                     <div className="flex-1 text-center">
-                        <div className="text-5xl font-bold min-w-[100px]">{tiem}+</div>
-                        <div className="text-2xl">Tiệm</div>
+                        <div className="text-4xl lg:text-5xl font-bold min-w-[100px]">{tiem}+</div>
+                        <div className="text-xl lg:text-2xl">Tiệm</div>
                     </div>
                     <div className="flex-1 text-center">
-                        <div className="text-5xl font-bold min-w-[100px]">{support}+</div>
-                        <div className="text-2xl">Support</div>
+                        <div className="text-4xl lg:text-5xl font-bold min-w-[100px]">{support}+</div>
+                        <div className="text-xl lg:text-2xl">Support</div>
                     </div>
                     <div className="flex-2 text-center">
-                        <div className="text-5xl font-bold min-w-[100px]">{vnUsPh}</div>
-                        <div className="text-2xl">VN, US, PH</div>
+                        <div className="text-4xl lg:text-5xl font-bold min-w-[100px]">{vnUsPh}</div>
+                        <div className="text-xl lg:text-2xl">VN, US, PH</div>
                     </div>
                 </div>
                 <img src={salonInBox} className='mt-30 rounded-2xl shadow-xl' />
             </div>
-            <div className="flex flex-col items-center justify-center py-20" data-aos="fade-up">
-                <div className="relative w-11/12 overflow-x-hidden">
-                    <div className="flex space-x-52 mx-auto overflow-x-auto px-10 no-scrollbar">
+            <div className="flex flex-col items-center justify-center py-10 md:py-20" data-aos="fade-up">
+                <div className="relative w-full overflow-x-auto no-scrollbar">
+                    <div className="flex space-x-10 md:space-x-52 mx-auto px-5 md:px-10">
                         {sections.map((section, index) => (
                             <div
                                 key={index}
                                 ref={(el) => (sectionRefs.current[index] = el)}
-                                className={`text-5xl font-bold transition duration-300 whitespace-nowrap cursor-pointer ${index === currentIndex ? "text-pink-500" : "text-pink-200"
+                                className={`text-3xl md:text-5xl font-bold transition duration-300 whitespace-nowrap cursor-pointer ${index === currentIndex ? "text-pink-500" : "text-pink-200"
                                     }`}
                                 onClick={() => handleClick(index)}
                             >
@@ -234,73 +237,91 @@ const HomePage = () => {
                         ))}
                     </div>
                 </div>
+
                 <motion.div
                     key={currentIndex}
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -50 }}
                     transition={{ duration: 1 }}
-                    className="bg-pink-50 p-8 rounded-lg shadow-lg w-11/12 mt-6 flex justify-center items-center"
+                    className="bg-pink-50 p-6 md:p-8 rounded-lg shadow-lg w-11/12 mt-6 flex flex-col md:flex-row justify-center items-center"
                 >
                     <img
                         src={sections[currentIndex].content.img}
                         alt={sections[currentIndex].title}
-                        className="w-1/3 rounded-lg"
+                        className="w-full md:w-1/3 rounded-lg"
                     />
-                    <p className="ml-10 mt-10 text-xl font-semibold text-gray-600">{sections[currentIndex].content.description}</p>
+                    <p className="mt-4 md:mt-10 md:ml-10 text-lg md:text-xl font-semibold text-gray-600 text-center md:text-left">
+                        {sections[currentIndex].content.description}
+                    </p>
                 </motion.div>
             </div>
-            <div className='flex flex-col items-center justify-center py-20 px-5' data-aos="fade-up">
-                <div className=' flex gap-3 font-serif font-bold text-6xl text-blue-900'>
-                    <p className='text-pink-500'>
-                        ZOTA
-                    </p>
-                    eco-system
+
+            <div className="flex flex-col items-center justify-center py-10 md:py-20 px-5" data-aos="fade-up">
+                {/* Tiêu đề */}
+                <div className="flex gap-2 md:gap-3 font-serif font-bold text-4xl md:text-6xl text-blue-900 text-center">
+                    <p className="text-pink-500">ZOTA</p>
+                    <span>eco-system</span>
                 </div>
-                <p className="text-2xl text-gray-900 text-center mt-10">
+
+                {/* Nội dung mô tả */}
+                <p className="text-lg md:text-2xl text-gray-900 text-center mt-6 md:mt-10">
                     Tối ưu hoạt động với hệ sinh thái Zota: thông minh, đầy đủ, ổn định cho tiệm
                     <span className="text-pink-500 font-medium block">
-                        NAIL SALON - HAIR SALON - BEAUTY SPA <a>của người Việt.</a>
-                    </span> .
+                        NAIL SALON - HAIR SALON - BEAUTY SPA <span className="block md:inline">của người Việt.</span>
+                    </span>
                 </p>
-                <img src={ecoSystem} />
+
+                {/* Hình ảnh */}
+                <img src={ecoSystem} alt="ZOTA Eco-System" className="w-full max-w-[400px] md:max-w-none mt-6 md:mt-10" />
             </div>
-            <div className=" flex items-center p-10 mt-10 rounded-2xl shadow-lg bg-pink-400 text-white " data-aos="fade-up">
-                <div className='flex flex-col justify-center gap-5'>
-                    <h3 className={`mt-4 text-6xl font-semibold transition-colors duration-300 `}>
+
+            <div className="flex flex-col md:flex-row items-center p-6 md:p-10 mt-6 md:mt-10 rounded-2xl shadow-lg bg-pink-400 text-white" data-aos="fade-up">
+                {/* Nội dung chữ */}
+                <div className="flex flex-col justify-center gap-3 md:gap-5 text-center md:text-left">
+                    <h3 className="mt-2 md:mt-4 text-4xl md:text-6xl font-semibold transition-colors duration-300">
                         CASH DISCOUNT PROGRAM
                     </h3>
-                    <p className="mt-2 text-4xl font-thin italic ">0% CREDIT CARD PROCESSING</p>
-                    <div className='flex gap-8 mt-10'>
-                        <div className=' bg-white text-pink-400 px-8 py-4 rounded-2xl flex items-center text-xl font-sans font-extrabold hover:bg-blue-900 cursor-pointer'>
+                    <p className="mt-1 md:mt-2 text-2xl md:text-4xl font-thin italic">
+                        0% CREDIT CARD PROCESSING
+                    </p>
+
+                    {/* Các nút bấm */}
+                    <div className="flex flex-col md:flex-row gap-4 md:gap-8 mt-6 md:mt-10">
+                        <div className="bg-white text-pink-400 px-6 md:px-8 py-3 md:py-4 rounded-2xl flex items-center justify-center text-lg md:text-xl font-sans font-extrabold hover:bg-blue-900 cursor-pointer">
                             Get Started
                         </div>
-                        <div className=" text-white bg-blue-900  px-8 py-4 rounded-2xl flex items-center text-xl font-sans font-extrabold hover:bg-pink-400 border-2 border-blue-900 cursor-pointer">
+                        <div className="text-white bg-blue-900 px-6 md:px-8 py-3 md:py-4 rounded-2xl flex items-center justify-center text-lg md:text-xl font-sans font-extrabold hover:bg-pink-400 border-2 border-blue-900 cursor-pointer">
                             Check Pricing
                         </div>
                     </div>
                 </div>
 
-                <div className="overflow-hidden rounded-lg p-20">
+                {/* Hình ảnh */}
+                <div className="overflow-hidden rounded-lg p-10 md:p-20 w-full max-w-[400px] md:max-w-none">
                     <img
                         src={cashDiscount}
-                        className="w-full  object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"
+                        alt="Cash Discount Program"
+                        className="w-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"
                     />
                 </div>
             </div>
-            <div className="flex w-full items-center gap-20 px-10 py-20 " data-aos="fade-up">
-                <div className=" flex flex-col gap-10 justify-center ml-3">
-                    <div className="flex text-blue-900 text-6xl font-serif font-normal">
-                        <p className='text-pink-400 font-semibold'>ZOMO</p> Mobile App
+
+            <div className="flex flex-col md:flex-row w-full items-center gap-5 md:gap-20 px-5 md:px-10 py-10 md:py-20" data-aos="fade-up">
+                {/* Phần nội dung chữ */}
+                <div className="flex flex-col gap-5 md:gap-10 justify-center text-center md:text-left">
+                    <div className="flex justify-center md:justify-start text-blue-900 text-4xl md:text-6xl font-serif font-normal">
+                        <p className="text-pink-400 font-semibold">ZOMO</p> Mobile App
                     </div>
-                    <div className="text-black text-xl font-light ">
+                    <div className="text-black text-base md:text-xl font-light">
                         Những khi chủ tiệm không có mặt, ZOMO chính là giải pháp! Chỉ cần cài đặt ứng dụng ZOMO trên điện thoại, người chủ có thể dễ dàng truy cập tất cả doanh thu, bảng lương, và những giao dịch chuyển khoản mọi lúc mọi nơi. Đồng thời, ZOMO còn có tính năng tính toán tự động những khoản hoa hồng và tiền tips của thợ một cách chính xác nhất.
                     </div>
                 </div>
-                <div className="w-full h-full">
+
+                {/* Phần video */}
+                <div className="w-full">
                     <iframe
-                        width="700"
-                        height="394"
+                        className="w-full h-auto lg:w-[700px] lg:h-[394px] aspect-video rounded-lg"
                         src="https://www.youtube.com/embed/930-ohw-qnc?controls=0&modestbranding=1&showinfo=0&rel=0&autoplay=1&mute=1"
                         title="[ZOMO App Tutorials] Giới Thiệu Các Tính Năng Cơ Bản Trên ZOMO"
                         frameBorder="0"
@@ -310,6 +331,7 @@ const HomePage = () => {
                     </iframe>
                 </div>
             </div>
+
         </div>
 
 

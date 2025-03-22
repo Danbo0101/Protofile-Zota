@@ -68,42 +68,37 @@ const About = () => {
 
     return (
         <div className="w-full px-5 pb-10 bg-white">
-            <div className="relative w-full h-[100vh] overflow-hidden rounded-2xl shadow-2xl" data-aos="fade-up">
-                <img src={bgAbout} alt="bgAbout" className="absolute left-0 w-full h-full object-cover blur-sm" />
-                <div className="absolute top-15 inset-0 bg-transparent">
-                    <div className='w-full flex flex-col justify-center items-center gap-5 ml-3'>
-                        <div className='text-white text-6xl font-serif font-bold '>
-                            Welcome to <span className="text-pink-400">ZOTA</span>
+            <div className="relative w-full min-h-screen overflow-hidden rounded-2xl shadow-2xl p-4" data-aos="fade-up">
+                {/* Background Image */}
+                <img src={bgAbout} alt="bgAbout" className="absolute inset-0 w-full h-full object-cover blur-sm" />
+
+                {/* Nội dung */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                    {/* Tiêu đề */}
+                    <h1 className="text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif font-bold">
+                        Welcome to <span className="text-pink-400">ZOTA</span>
+                    </h1>
+                    <p className="text-white text-sm sm:text-lg md:text-xl lg:text-2xl font-medium mt-2">
+                        Đổi mới, sáng tạo và cung cấp giải pháp cho chủ doanh nghiệp
+                    </p>
+
+                    {/* Video */}
+                    <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl mt-6">
+                        <div className="relative w-full aspect-video">
+                            <iframe
+                                src="https://www.youtube.com/embed/CZU7wEqLvSc?si=E9GPthQ6XdkkXBSO&autoplay=1&mute=1&loop=1&playlist=CZU7wEqLvSc&controls=0&vq=hd1080"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="autoplay; encrypted-media"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                                className="rounded-2xl w-full h-full"
+                            ></iframe>
                         </div>
-                        <div className='text-white text-2xl font-medium'>
-                            Đổi mới, sáng tạo và cung cấp giải pháp cho chủ doanh nghiệp
-                        </div>
-                    </div>
-                    <div className="w-4/5 absolute left-40 mt-4">
-                        {/* <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full object-cover rounded-2xl shadow-2xl"
-                        >
-                            <source src={aboutVideo} type="video/mp4" />
-                        </video> */}
-                        <iframe
-                            width="1100"
-                            height="620"
-                            src="https://www.youtube.com/embed/CZU7wEqLvSc?si=E9GPthQ6XdkkXBSO&autoplay=1&mute=1&loop=1&playlist=CZU7wEqLvSc&controls=0&vq=hd1080"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="autoplay; encrypted-media"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen
-                            className="rounded-2xl"
-                        >
-                        </iframe>
                     </div>
                 </div>
             </div>
+
             <div className="flex flex-col gap-32 md:flex-row items-center justify-center px-6 md:px-12 py-8 bg-white min-h-screen" data-aos="fade-up">
                 <div className="w-96 h-96 md:w-96 md:h-96 bg-pink-500 rounded-full flex items-center justify-center">
                     <svg
