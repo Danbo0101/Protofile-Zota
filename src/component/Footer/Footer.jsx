@@ -3,8 +3,8 @@ import contact from "../../assets/Image/contact.png";
 import SendIcon from '@mui/icons-material/Send';
 import logo from '../../assets/Image/logoHomePage.png';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { IconButton } from '@mui/material';
 import AOS from "aos";
@@ -51,10 +51,18 @@ const Footer = () => {
                         Zota là một công ty có kinh nghiệm trên 15 năm hoạt động rộng rãi trong nhiều lĩnh vực...
                     </div>
                     <div className='flex gap-3'>
-                        <IconButton><FacebookOutlinedIcon className="text-blue-700" sx={{ fontSize: "30px" }} /></IconButton>
-                        <IconButton><InstagramIcon className="text-pink-500" sx={{ fontSize: "30px" }} /></IconButton>
-                        <IconButton><LinkedInIcon className="text-blue-600" sx={{ fontSize: "30px" }} /></IconButton>
-                        <IconButton><YouTubeIcon className="text-red-600" sx={{ fontSize: "30px" }} /></IconButton>
+                        <IconButton onClick={() => window.open("https://www.facebook.com/thonguyenzota", "_blank")}>
+                            <FacebookOutlinedIcon className="text-blue-700" sx={{ fontSize: 30 }} />
+                        </IconButton>
+                        <IconButton onClick={() => window.open("https://www.instagram.com/zota_tho_nguyen", "_blank")}>
+                            <InstagramIcon className="text-pink-500" sx={{ fontSize: 30 }} />
+                        </IconButton>
+                        <IconButton onClick={() => window.open("https://www.facebook.com/ZotaByThoNguyenDPS/", "_blank")}>
+                            <FacebookIcon className="text-blue-600" sx={{ fontSize: 30 }} />
+                        </IconButton>
+                        <IconButton>
+                            <YouTubeIcon className="text-red-600" sx={{ fontSize: 30 }} />
+                        </IconButton>
                     </div>
                 </div>
                 <div className="w-full lg:w-1/4 flex flex-col gap-5">

@@ -35,11 +35,12 @@ const App = (props) => {
       <Footer />
       <div
         onClick={scrollToTop}
-        className={`cursor-pointer fixed bottom-10 right-5 p-3 bg-pink-400 text-white rounded-full shadow-lg transition-opacity duration-300 ${visible ? "opacity-100" : "opacity-0"
-          }`}
+        className={`cursor-pointer fixed bottom-10 right-5 p-3 bg-pink-400 text-white rounded-full shadow-lg transition-opacity duration-300 
+    ${visible ? "opacity-30 hover:opacity-100" : "opacity-0"}`}
       >
         <ArrowUp size={24} />
       </div>
+
     </div>
   );
 };

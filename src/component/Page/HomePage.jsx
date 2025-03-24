@@ -21,11 +21,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const HomePage = () => {
-
     const [tiem, setTiem] = useState(0);
     const [support, setSupport] = useState(0);
     const [vnUsPh, setVnUsPh] = useState(0);
-
     const [currentIndex, setCurrentIndex] = useState(0);
     const sectionRefs = useRef([]);
 
@@ -74,7 +72,6 @@ const HomePage = () => {
     };
 
     const startAnimation = () => {
-        let tiemStart = 0, supportStart = 0, vnUsPhStart = 0;
         const tiemTarget = 4000, supportTarget = 100, vnUsPhTarget = 3;
         const duration = 2000;
         const startTime = performance.now();
@@ -166,7 +163,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-
             <div className='flex flex-col gap-2 mt-10 rounded-2xl shadow-xl ' data-aos="fade-up">
                 <SlideLogoTop />
                 <SlideLogoBottom />
@@ -237,7 +233,6 @@ const HomePage = () => {
                         ))}
                     </div>
                 </div>
-
                 <motion.div
                     key={currentIndex}
                     initial={{ opacity: 0, x: 50 }}
@@ -256,28 +251,20 @@ const HomePage = () => {
                     </p>
                 </motion.div>
             </div>
-
             <div className="flex flex-col items-center justify-center py-10 md:py-20 px-5" data-aos="fade-up">
-                {/* Tiêu đề */}
                 <div className="flex gap-2 md:gap-3 font-serif font-bold text-4xl md:text-6xl text-blue-900 text-center">
                     <p className="text-pink-500">ZOTA</p>
                     <span>eco-system</span>
                 </div>
-
-                {/* Nội dung mô tả */}
                 <p className="text-lg md:text-2xl text-gray-900 text-center mt-6 md:mt-10">
                     Tối ưu hoạt động với hệ sinh thái Zota: thông minh, đầy đủ, ổn định cho tiệm
                     <span className="text-pink-500 font-medium block">
                         NAIL SALON - HAIR SALON - BEAUTY SPA <span className="block md:inline">của người Việt.</span>
                     </span>
                 </p>
-
-                {/* Hình ảnh */}
                 <img src={ecoSystem} alt="ZOTA Eco-System" className="w-full max-w-[400px] md:max-w-none mt-6 md:mt-10" />
             </div>
-
             <div className="flex flex-col md:flex-row items-center p-6 md:p-10 mt-6 md:mt-10 rounded-2xl shadow-lg bg-pink-400 text-white" data-aos="fade-up">
-                {/* Nội dung chữ */}
                 <div className="flex flex-col justify-center gap-3 md:gap-5 text-center md:text-left">
                     <h3 className="mt-2 md:mt-4 text-4xl md:text-6xl font-semibold transition-colors duration-300">
                         CASH DISCOUNT PROGRAM
@@ -285,8 +272,6 @@ const HomePage = () => {
                     <p className="mt-1 md:mt-2 text-2xl md:text-4xl font-thin italic">
                         0% CREDIT CARD PROCESSING
                     </p>
-
-                    {/* Các nút bấm */}
                     <div className="flex flex-col md:flex-row gap-4 md:gap-8 mt-6 md:mt-10">
                         <div className="bg-white text-pink-400 px-6 md:px-8 py-3 md:py-4 rounded-2xl flex items-center justify-center text-lg md:text-xl font-sans font-extrabold hover:bg-blue-900 cursor-pointer">
                             Get Started
@@ -296,8 +281,6 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Hình ảnh */}
                 <div className="overflow-hidden rounded-lg p-10 md:p-20 w-full max-w-[400px] md:max-w-none">
                     <img
                         src={cashDiscount}
@@ -306,9 +289,7 @@ const HomePage = () => {
                     />
                 </div>
             </div>
-
             <div className="flex flex-col md:flex-row w-full items-center gap-5 md:gap-20 px-5 md:px-10 py-10 md:py-20" data-aos="fade-up">
-                {/* Phần nội dung chữ */}
                 <div className="flex flex-col gap-5 md:gap-10 justify-center text-center md:text-left">
                     <div className="flex justify-center md:justify-start text-blue-900 text-4xl md:text-6xl font-serif font-normal">
                         <p className="text-pink-400 font-semibold">ZOMO</p> Mobile App
@@ -317,8 +298,6 @@ const HomePage = () => {
                         Những khi chủ tiệm không có mặt, ZOMO chính là giải pháp! Chỉ cần cài đặt ứng dụng ZOMO trên điện thoại, người chủ có thể dễ dàng truy cập tất cả doanh thu, bảng lương, và những giao dịch chuyển khoản mọi lúc mọi nơi. Đồng thời, ZOMO còn có tính năng tính toán tự động những khoản hoa hồng và tiền tips của thợ một cách chính xác nhất.
                     </div>
                 </div>
-
-                {/* Phần video */}
                 <div className="w-full">
                     <iframe
                         className="w-full h-auto lg:w-[700px] lg:h-[394px] aspect-video rounded-lg"

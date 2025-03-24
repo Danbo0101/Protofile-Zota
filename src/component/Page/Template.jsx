@@ -5,7 +5,7 @@ import webThumbnail from "../../assets/Image/webThumbnail.png";
 import banner from "../../assets/Image/banner.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState, useRef } from "react";
+import { useEffect } from "react";
 import contactVideo from "../../assets/Video/contactVideo.mp4"
 import { SlideLogoTop } from "../General/SlideLogo";
 
@@ -15,7 +15,7 @@ const Templates = () => {
     const services = [
         {
             title: "LOGO",
-            image: logoThumbnail, // Thay thế bằng đường dẫn hình ảnh thực tế
+            image: logoThumbnail,
         },
         {
             title: "WEBSITE",
@@ -56,7 +56,6 @@ const Templates = () => {
             </div>
             <div className="py-10 " data-aos="fade-up">
                 <video
-                    // controls
                     autoPlay
                     loop
                     muted

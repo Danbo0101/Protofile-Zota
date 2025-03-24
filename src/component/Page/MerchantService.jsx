@@ -31,7 +31,7 @@ const MerchantService = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIsZoomed((prev) => !prev);
-        }, 2000); // Đổi trạng thái mỗi 2 giây
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
@@ -39,7 +39,7 @@ const MerchantService = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 1500); // 1.5s để có hiệu ứng mượt hơn
+        }, 1500);
 
         return () => clearInterval(interval);
     }, []);
@@ -51,12 +51,22 @@ const MerchantService = () => {
     return (
         <div className="w-full px-5 pb-10 bg-white">
             <div className="relative w-full min-h-screen flex flex-col items-center" data-aos="fade-up">
-                <div className="relative top-32 px-5 md:px-20 flex flex-col md:flex-row gap-10 md:gap-40">
+                <div className="relative top-10 lg:top-32 px-5 md:px-20 flex flex-col md:flex-row gap-10 md:gap-40">
                     <div className="w-full md:w-2/5 flex flex-col justify-center gap-5">
-                        <div className="text-pink-400 text-4xl md:text-6xl font-serif font-semibold">
+                        <div className="text-center lg:text-start text-pink-400 text-4xl md:text-6xl font-serif font-semibold">
                             Tiết kiệm cùng với <span className="text-blue-900">Zota</span>
                         </div>
-                        <div className="flex gap-4 md:gap-8 mt-5">
+                        <div className="flex sm:block md:hidden justify-center py-10 items-center ">
+                            <motion.img
+                                src={merchantA920}
+                                alt="Zoomable"
+                                className="w-[250px] md:w-[500px] h-auto"
+                                initial={{ scale: 1 }}
+                                animate={{ scale: isZoomed ? 1.5 : 1 }}
+                                transition={{ duration: 10, ease: "easeInOut" }}
+                            />
+                        </div>
+                        <div className="flex justify-center md:justify-start gap-4 md:gap-8 mt-5">
                             <div className="bg-pink-400 px-6 py-2 md:px-8 md:py-3 rounded-2xl text-sm md:text-base font-extrabold hover:bg-blue-900 cursor-pointer">
                                 Get Started
                             </div>
@@ -65,23 +75,22 @@ const MerchantService = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center mt-20 items-center">
+                    <div className="hidden md:flex justify-center px-10 py-10 items-center">
                         <motion.img
                             src={merchantA920}
                             alt="Zoomable"
                             className="w-[250px] md:w-[500px] h-auto"
                             initial={{ scale: 1 }}
-                            animate={{ scale: isZoomed ? 2 : 1 }}
+                            animate={{ scale: isZoomed ? 1.5 : 1 }}
                             transition={{ duration: 10, ease: "easeInOut" }}
                         />
                     </div>
                 </div>
-
                 <div className="relative w-full mt-10 md:mt-30">
                     {images.map((item, i) => (
                         <motion.div
                             key={i}
-                            className="absolute left-1/2 transform -translate-x-1/2 w-[150px] md:w-[200px] flex flex-col items-center z-10"
+                            className="absolute left-1/2 top-20 md:top-0  transform -translate-x-1/2 w-[150px] md:w-[200px] flex flex-col items-center z-10"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: i === index ? 1 : 0 }}
                             transition={{ duration: 0.5 }}
@@ -97,29 +106,27 @@ const MerchantService = () => {
                     ))}
                 </div>
             </div>
-
             <div className='flex flex-col gap-2 mt-10 rounded-2xl shadow-xl ' data-aos="fade-up">
                 <SlideLogoTop />
             </div>
-            <div className=" flex flex-col justify-center items-center mt-32 gap-10" data-aos="fade-up">
-                <div className="text-pink-400 text-6xl  font-bold flex gap-3 ">
-                    Những Loại <spam className="text-blue-900 ">Rate</spam> Phổ Biến Hiện Nay
-                </div>
-                <img src={merchantSer5} className="w-11/12 rounded-2xl " />
+            <div className="flex flex-col justify-center items-center mt-16 md:mt-32 gap-6 px-4 md:px-0 text-center" data-aos="fade-up">
+                <h2 className="text-pink-400 text-4xl md:text-6xl font-bold flex flex-wrap justify-center gap-2 leading-tight">
+                    Những Loại <span className="text-blue-900">Rate</span> Phổ Biến Hiện Nay
+                </h2>
+                <img src={merchantSer5} className="w-full md:w-4/5 max-w-[1200px] rounded-2xl shadow-lg" alt="Popular Rate Types" />
             </div>
-            <div className="flex flex-col md:flex-row items-center justify-center py-40 bg-white" data-aos="fade-right">
-                <div className="w-full md:w-1/2 flex justify-center">
-                    <div className="w-96 h-96 rounded-full overflow-hidden shadow-lg">
-                        <img
-                            src={merchantSer6}
-                            alt="POS Terminal"
-                            className="w-full h-full object-cover"
-                        />
+            <div className="flex flex-col md:flex-row items-center justify-center py-20 md:py-40 bg-white px-6 md:px-0" data-aos="fade-right">
+                <div className="w-full md:w-1/2 hidden md:flex justify-center">
+                    <div className=" max-w-[350px] md:max-w-[400px] aspect-square rounded-full overflow-hidden shadow-lg">
+                        <img src={merchantSer6} alt="POS Terminal" className="w-full h-full object-cover" />
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 text-center md:text-left md:mt-0 md:pl-12 ">
-                    <h2 className="text-pink-500 text-5xl font-bold">CASH DISCOUNT</h2>
-                    <div className="flex items-center mt-4">
+                <div className="w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0 md:pl-12">
+                    <h2 className="text-pink-500 text-4xl md:text-5xl font-bold leading-tight pb-10 md:pb-0">CASH DISCOUNT</h2>
+                    <div className="sm:flex md:hidden max-w-[350px] mx-10 aspect-square rounded-full overflow-hidden shadow-lg">
+                        <img src={merchantSer6} alt="POS Terminal" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="flex items-center justify-center md:justify-start mt-4">
                         <span className="text-8xl font-extrabold text-blue-900">0</span>
                         <span className="text-4xl font-bold text-pink-500">%</span>
                         <div className="ml-3">
@@ -127,59 +134,60 @@ const MerchantService = () => {
                             <span className="block text-2xl font-bold text-blue-900">Processing</span>
                         </div>
                     </div>
-                    <p className="text-pink-500 text-xl font-semibold mt-2">Thu 100% doanh số xử lý của bạn</p>
-                    <ul className="mt-4 text-gray-700 text-lg space-y-2">
+                    <p className="text-pink-500 text-lg md:text-xl font-semibold mt-2">Thu 100% doanh số xử lý của bạn</p>
+                    <ul className="mt-4 text-gray-700 text-lg md:text-xl space-y-1.5">
                         <li>✔ Không Phí Giao Dịch | Không Phí Ẩn!</li>
                         <li>✔ 100% hợp pháp. Có sẵn tại tất cả 50 tiểu bang</li>
                         <li>✔ Loại bỏ hoàn toàn các khoản phí xử lý</li>
                         <li>✔ Nhận tiền vào ngày tiếp theo</li>
                         <li>✔ Không Cần Thanh Toán Trước</li>
                     </ul>
-                    <div className="w-1/3">
-                        <div className=" text-center mt-6 px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
+                    <div className="flex justify-center md:justify-start mt-6">
+                        <div className="w-50 md:w-1/3 text-center px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
                             Tìm Hiểu Thêm
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div className="bg-pink-100 flex items-center justify-center p-10 rounded-2xl shadow-xl" data-aos="fade-left">
-                <div className="max-w-5xl flex  md:flex-row items-center gap-60">
-                    <div className="text-left w-2/3 flex flex-col gap-2">
-                        <h2 className="text-pink-500 text-5xl font-bold ">FLAT RATE</h2>
-                        <h3 className="flex text-2xl font-bold font-serif text-blue-900 mt-2 items-end ">
+            <div className="bg-pink-100 flex items-center justify-center p-6 md:p-10 rounded-2xl shadow-xl" data-aos="fade-left">
+                <div className="max-w-5xl flex flex-col md:flex-row items-center gap-10 md:gap-60">
+                    <div className="text-left w-full md:w-2/3 flex flex-col gap-2">
+                        <h2 className="text-pink-500 text-4xl md:text-5xl font-bold pb-5 lg:pb-0">FLAT RATE</h2>
+                        <div className="w-full sm:flex md:hidden justify-start">
+                            <div className="w-60 h-60 rounded-full overflow-hidden shadow-lg">
+                                <img src={merchantSer7} alt="POS Terminal" className="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                        <h3 className="flex text-xl md:text-2xl font-bold font-serif text-blue-900 mt-2 items-end">
                             <div className="flex flex-col">
-                                <span className="font-extrabold text-4xl">TAKE</span> <span className="font-extrabold text-4xl">CARE</span>
+                                <span className="font-extrabold text-3xl md:text-4xl">TAKE</span>
+                                <span className="font-extrabold text-3xl md:text-4xl">CARE</span>
                             </div>
                             <span className="text-pink-500 font-extrabold">%</span> Dễ Dàng
                         </h3>
-                        <p className="text-pink-500 mt-2 text-xl font-semibold">Không Care Về Loại Thẻ</p>
-                        <ul className=" mt-4 text-gray-700 space-y-1 text-lg">
+                        <p className="text-pink-500 mt-2 text-lg md:text-xl font-semibold">Không Care Về Loại Thẻ</p>
+                        <ul className="mt-4 text-gray-700 space-y-1 text-base md:text-lg">
                             <li>✔ Không Monthly Fee</li>
                             <li>✔ Dễ Dàng Kiểm Tra Hàng Tháng</li>
                             <li>✔ Nhận tiền vào ngày tiếp theo</li>
                             <li>✔ Không Fee Ẩn</li>
                         </ul>
                         <div className="w-full">
-                            <div className=" text-center mt-6 px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
+                            <div className="text-center mt-6 px-6 py-3 md:px-8 md:py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
                                 Tìm Hiểu Thêm
                             </div>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
-                        <div className="w-96 h-96 rounded-full overflow-hidden shadow-lg">
-                            <img
-                                src={merchantSer7}
-                                alt="POS Terminal"
-                                className="w-full h-full object-cover"
-                            />
+                    <div className="w-full md:w-1/2 hidden md:flex justify-center">
+                        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg">
+                            <img src={merchantSer7} alt="POS Terminal" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row items-center justify-center py-40 bg-white" data-aos="fade-right">
-                <div className="w-full md:w-1/2 flex justify-center">
-                    <div className="w-96 h-96 rounded-full overflow-hidden shadow-lg">
+            <div className="flex flex-col md:flex-row items-center justify-center py-20 md:py-40 bg-white" data-aos="fade-right">
+                <div className="w-full md:w-1/2 hidden md:flex justify-center">
+                    <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg">
                         <img
                             src={merchantSer8}
                             alt="POS Terminal"
@@ -187,44 +195,63 @@ const MerchantService = () => {
                         />
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 text-center md:text-left md:mt-0 md:pl-12 ">
-                    <h2 className="text-pink-500 text-5xl font-bold">INTERCHANGE FEE</h2>
-                    <div className="flex items-end mt-4">
-                        <div className="flex flex-col text-blue-900 font-serif font-extrabold">
-                            <span className=" text-4xl">Low</span> <span className=" text-4xl">Processing</span>
+                <div className="w-full md:w-1/2 text-center md:text-left md:mt-0 md:pl-12 px-4">
+                    <h2 className="text-pink-500 text-3xl md:text-5xl font-bold pb-5 md:pb-0">INTERCHANGE FEE</h2>
+                    <div className="w-full sm:flex md:hidden mx-12 ">
+                        <div className="w-60 h-60 rounded-full overflow-hidden shadow-lg">
+                            <img
+                                src={merchantSer8}
+                                alt="POS Terminal"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
-                        <span className="text-5xl font-bold text-pink-500">%</span>
                     </div>
-                    <p className="text-pink-500 text-xl font-semibold mt-2">Thu 100% doanh số xử lý của bạn</p>
-                    <ul className="mt-4 text-gray-700 text-lg space-y-2">
+                    <div className="flex justify-center md:justify-start items-end mt-4">
+                        <div className="flex flex-col text-blue-900 font-serif font-extrabold">
+                            <span className="text-3xl md:text-4xl">Low</span>
+                            <span className="text-3xl md:text-4xl">Processing</span>
+                        </div>
+                        <span className="text-4xl md:text-5xl font-bold text-pink-500">%</span>
+                    </div>
+                    <p className="text-pink-500 text-lg md:text-xl font-semibold mt-2">Thu 100% doanh số xử lý của bạn</p>
+                    <ul className="mt-4 text-gray-700 text-base md:text-lg space-y-2">
                         <li>✔ Không Phí Giao Dịch | Không Phí Ẩn!</li>
                         <li>✔ 100% hợp pháp. Có sẵn tại tất cả 50 tiểu bang</li>
                         <li>✔ Loại bỏ hoàn toàn các khoản phí xử lý</li>
                         <li>✔ Nhận tiền vào ngày tiếp theo</li>
                         <li>✔ Không Cần Thanh Toán Trước</li>
                     </ul>
-                    <div className="w-1/3">
-                        <div className=" text-center mt-6 px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
+                    <div className="w-full md:w-1/3">
+                        <div className="text-center mt-6 px-6 md:px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
                             Tìm Hiểu Thêm
                         </div>
                     </div>
                 </div>
             </div>
             <div className="bg-pink-100 flex items-center justify-center p-10 rounded-2xl shadow-xl" data-aos="fade-left">
-                <div className="max-w-5xl flex  md:flex-row items-center gap-60">
-                    <div className="text-left w-2/3 flex flex-col gap-5">
-                        <h2 className="text-pink-500 text-5xl font-bold ">SURCHARGE</h2>
-                        <div className="text-black text-lg font-medium">
+                <div className="max-w-5xl flex flex-col md:flex-row items-center gap-10 md:gap-60">
+                    <div className="w-full md:w-2/3 flex flex-col gap-5 text-center md:text-left">
+                        <h2 className="text-pink-500 text-3xl md:text-5xl font-bold">SURCHARGE</h2>
+                        <div className="w-full  sm:flex md:hidden justify-center">
+                            <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg">
+                                <img
+                                    src={merchantSer7}
+                                    alt="POS Terminal"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        </div>
+                        <div className="text-black text-base md:text-lg font-medium px-2 md:px-0">
                             <span className="text-blue-800 font-extrabold">Surcharge</span> là khoản phí khách hàng phải trả khi họ thanh toán bằng thẻ credit card, để bù đắp cho chi phí xử lý thẻ tín dụng của tiệm. Khi khách hàng sử dụng thẻ debit card, thì chi phí xử lý thẻ tín dụng thường được chủ tiệm chịu, không phải khách hàng.
                         </div>
-                        <div className="w-1/2">
-                            <div className=" text-center mt-6 px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
+                        <div className="w-full md:w-1/2">
+                            <div className="text-center mt-6 px-6 md:px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
                                 Tìm Hiểu Thêm
                             </div>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
-                        <div className="w-96 h-96 rounded-full overflow-hidden shadow-lg">
+                    <div className="w-full hidden md:w-1/2 md:flex justify-center">
+                        <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-lg">
                             <img
                                 src={merchantSer7}
                                 alt="POS Terminal"
