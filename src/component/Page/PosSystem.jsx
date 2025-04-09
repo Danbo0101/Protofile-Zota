@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import bgPosSystem from "../../assets/Image/bgPosSystem.png";
 import PosSystem21 from "../../assets/Image/PosSystem21.png";
-// import PosSystem1 from "../../assets/Image/PosSystem1.png";
+import posSystem1 from "../../assets/Image/posSystem1.png";
 import posBanner from "../../assets/Image/posBanner.jpg";
 import posTurn from "../../assets/Image/posTurn.png";
 import posPayroll from "../../assets/Image/posPayroll.png";
@@ -59,7 +59,7 @@ const PosSystem = () => {
                 <SlideLogoTop />
             </div>
             <img src={posBanner} className=" w-full py-24" data-aos="fade-up" />
-            {/* <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center py-10 px-5 rounded-2xl shadow-2xl" data-aos="fade-left">
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center py-10 px-5 rounded-2xl shadow-2xl" data-aos="fade-left">
                 <div className="flex flex-col w-full lg:w-[600px] justify-center gap-10 lg:gap-20">
                     <div className="text-blue-800 flex gap-2 text-3xl lg:text-5xl font-medium text-center justify-center lg:justify-start lg:text-left">
                         Màn Hình <p className="text-pink-400"> POS 21" </p>
@@ -67,13 +67,13 @@ const PosSystem = () => {
                     <div className="text-black text-base lg:text-lg font-normal text-center lg:text-left">
                         Khi làm việc trên màn hình lớn và sắc nét, các thông tin và ứng dụng cần thiết sẽ được sắp xếp và hiển thị rõ ràng cùng một lúc, giúp bạn thao tác dễ dàng, linh hoạt hơn. Ngoài ra, màn hình lớn còn giúp bạn rút ngắn được nhiều công đoạn khi cần chỉnh sửa hoặc bổ sung cho hóa đơn.
                     </div>
-                    <img src={PosSystem1} className="md:hidden w-full max-w-[600px] object-cover" />
+                    <img src={posSystem1} className="md:hidden w-full max-w-[600px] object-cover" />
                     <div className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
                         Get Started
                     </div>
                 </div>
-                <img src={PosSystem1} className="w-full hidden md:block max-w-[600px] object-cover" />
-            </div> */}
+                <img src={posSystem1} className="w-full hidden md:block max-w-[600px] object-cover" />
+            </div>
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center py-10 px-5 rounded-2xl shadow-2xl" data-aos="fade-right">
                 <img src={posTurn} className="w-full hidden md:block max-w-[600px] object-cover" />
 
