@@ -11,5 +11,6 @@ export default defineConfig({
   ],
   server: {
     host: true,
-  }
+  },
+  allowedHosts: ['zotapossystem.com'],
 })
