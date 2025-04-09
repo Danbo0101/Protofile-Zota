@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import bgPosSystem from "../../assets/Image/bgPosSystem.png";
 import PosSystem21 from "../../assets/Image/PosSystem21.png";
-import PosSystem1 from "../../assets/Image/PosSystem1.png";
+// import PosSystem1 from "../../assets/Image/PosSystem1.png";
 import posBanner from "../../assets/Image/posBanner.jpg";
 import posTurn from "../../assets/Image/posTurn.png";
 import posPayroll from "../../assets/Image/posPayroll.png";
@@ -59,7 +59,7 @@ const PosSystem = () => {
                 <SlideLogoTop />
             </div>
             <img src={posBanner} className=" w-full py-24" data-aos="fade-up" />
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center py-10 px-5 rounded-2xl shadow-2xl" data-aos="fade-left">
+            {/* <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center py-10 px-5 rounded-2xl shadow-2xl" data-aos="fade-left">
                 <div className="flex flex-col w-full lg:w-[600px] justify-center gap-10 lg:gap-20">
                     <div className="text-blue-800 flex gap-2 text-3xl lg:text-5xl font-medium text-center justify-center lg:justify-start lg:text-left">
                         Màn Hình <p className="text-pink-400"> POS 21" </p>
@@ -73,7 +73,7 @@ const PosSystem = () => {
                     </div>
                 </div>
                 <img src={PosSystem1} className="w-full hidden md:block max-w-[600px] object-cover" />
-            </div>
+            </div> */}
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center py-10 px-5 rounded-2xl shadow-2xl" data-aos="fade-right">
                 <img src={posTurn} className="w-full hidden md:block max-w-[600px] object-cover" />
 
