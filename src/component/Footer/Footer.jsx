@@ -17,6 +17,7 @@ const Footer = () => {
         AOS.init({ duration: 2000 });
     }, []);
 
+
     return (
         <div className="flex flex-col w-full bg-white">
             <div className="w-full flex flex-col lg:flex-row px-5 lg:px-10 gap-10 lg:gap-20 justify-center">
@@ -69,17 +70,36 @@ const Footer = () => {
                     <div className="text-center font-bold text-lg text-pink-400 mt-5 lg:mt-8">Contact Us</div>
                     <div><strong>Address:</strong> 4131 Marlton Pike, Pennsauken, NJ 08109</div>
                     <div><strong>Phone:</strong> (404) 806-4448</div>
-                    <div><strong>Website:</strong> nailmediasolutions.com</div>
+                    <div><strong>Website:</strong> zotapossystem.com</div>
                     <div><strong>Email:</strong> nguyenhuutho029@gmail.com</div>
                 </div>
                 <div className="w-full lg:w-1/8 flex flex-col items-center lg:items-start gap-3">
                     <div className="text-center font-bold text-lg text-pink-400 mt-5 lg:mt-8">Services</div>
-                    <a className="italic">Pos system</a>
-                    <a className="italic">Credit card processing</a>
+                    <a
+                        href="/pos-system"
+                        className="italic underline hover:text-pink-500"
+                    >
+                        Pos system
+                    </a>
+                    <a
+                        href="/merchant-service"
+                        className="italic underline hover:text-pink-500"
+                    >Credit card processing</a>
                     <a className="italic">Marketing</a>
-                    <a className="italic">Website</a>
-                    <a className="italic">Gift card</a>
-                    <a className="italic">Digital</a>
+                    <a
+
+                        className="italic "
+                    >
+                        Website</a>
+                    <a
+                        href="/templates"
+                        className="italic underline hover:text-pink-500"
+                    >
+                        Gift card</a>
+                    <a
+                        href="/templates"
+                        className="italic underline hover:text-pink-500"
+                    >Digital</a>
                 </div>
                 <div className="w-full lg:w-1/4 flex flex-col gap-5">
                     <div className="text-center font-bold text-lg text-pink-400 mt-5 lg:mt-8">Location</div>

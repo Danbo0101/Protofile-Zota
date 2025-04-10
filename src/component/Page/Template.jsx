@@ -10,7 +10,9 @@ import contactVideo from "../../assets/Video/contactVideo.mp4"
 import { SlideLogoTop } from "../General/SlideLogo";
 
 
+
 const Templates = () => {
+
 
     const services = [
         {
@@ -38,7 +40,9 @@ const Templates = () => {
     return (
         <div className="w-full px-5 pb-10 bg-white">
             <img src={banner} className="w-full rounded-2xl shadow-2xl mb-20" data-aos="fade-up" />
-            <div className="flex flex-wrap justify-center items-center gap-16 " data-aos="fade-up">
+            <div
+                onClick={() => window.open("https://templates.zota.us", "_blank")}
+                className="flex flex-wrap justify-center items-center gap-16 " data-aos="fade-up">
                 {services.map((service, index) => (
                     <div key={index} className="text-center relative w-64 cursor-pointer">
                         <div className="bg-white p-6 rounded-2xl shadow-xl overflow-hidden">

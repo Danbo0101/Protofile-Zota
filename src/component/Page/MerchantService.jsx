@@ -53,7 +53,7 @@ const MerchantService = () => {
             <div className="relative w-full min-h-screen flex flex-col items-center" data-aos="fade-up">
                 <div className="relative top-10 lg:top-32 px-5 md:px-20 flex flex-col md:flex-row gap-10 md:gap-40">
                     <div className="w-full md:w-2/5 flex flex-col justify-center gap-5">
-                        <div className="text-center lg:text-start text-pink-400 text-4xl md:text-6xl font-serif font-semibold">
+                        <div className="text-center lg:text-start text-pink-400 text-4xl md:text-6xl font-playfair font-semibold">
                             Tiết kiệm cùng với <span className="text-blue-900">Zota</span>
                         </div>
                         <div className="flex sm:block md:hidden justify-center py-10 items-center ">
@@ -67,12 +67,16 @@ const MerchantService = () => {
                             />
                         </div>
                         <div className="flex justify-center md:justify-start gap-4 md:gap-8 mt-5">
-                            <div className="bg-pink-400 px-6 py-2 md:px-8 md:py-3 rounded-2xl text-sm md:text-base font-extrabold hover:bg-blue-900 cursor-pointer">
+                            <a
+                                href="tel:+14048064448"
+                                className="bg-pink-400 px-6 py-2 md:px-8 md:py-3 rounded-2xl text-sm md:text-base font-extrabold hover:bg-blue-900 cursor-pointer">
                                 Get Started
-                            </div>
-                            <div className="border-2 border-pink-400 px-6 py-2 md:px-8 md:py-3 bg-white text-black rounded-2xl text-sm md:text-base font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
+                            </a>
+                            <a
+                                href="tel:+14048064448"
+                                className="border-2 border-pink-400 px-6 py-2 md:px-8 md:py-3 bg-white text-black rounded-2xl text-sm md:text-base font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
                                 Check Pricing
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div className="hidden md:flex justify-center px-10 py-10 items-center">
@@ -106,7 +110,7 @@ const MerchantService = () => {
                     ))}
                 </div>
             </div>
-            <div className='flex flex-col gap-2 mt-10 rounded-2xl shadow-xl ' data-aos="fade-up">
+            <div className='flex flex-col gap-2 md:mt-48 rounded-2xl shadow-xl ' data-aos="fade-up">
                 <SlideLogoTop />
             </div>
             <div className="flex flex-col justify-center items-center mt-16 md:mt-32 gap-6 px-4 md:px-0 text-center" data-aos="fade-up">
@@ -143,15 +147,17 @@ const MerchantService = () => {
                         <li>✔ Không Cần Thanh Toán Trước</li>
                     </ul>
                     <div className="flex justify-center md:justify-start mt-6">
-                        <div className="w-50 md:w-1/3 text-center px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+                        <a
+                            href="tel:+14048064448"
+                            className="w-50 md:w-1/3 text-center px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
                             Tìm Hiểu Thêm
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
             <div className="bg-pink-100 flex items-center justify-center p-6 md:p-10 rounded-2xl shadow-xl" data-aos="fade-left">
                 <div className="max-w-5xl flex flex-col md:flex-row items-center gap-10 md:gap-60">
-                    <div className="text-left w-full md:w-2/3 flex flex-col gap-2">
+                    <div className="text-center md:text-left w-full md:w-2/3 flex flex-col gap-2">
                         <h2 className="text-pink-500 text-4xl md:text-5xl font-bold pb-5 lg:pb-0">FLAT RATE</h2>
                         <div className="w-full sm:flex md:hidden justify-start">
                             <div className="w-60 h-60 rounded-full overflow-hidden shadow-lg">
@@ -172,10 +178,12 @@ const MerchantService = () => {
                             <li>✔ Nhận tiền vào ngày tiếp theo</li>
                             <li>✔ Không Fee Ẩn</li>
                         </ul>
-                        <div className="w-full">
-                            <div className="text-center mt-6 px-6 py-3 md:px-8 md:py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
+                        <div className="w-full mt-5">
+                            <a
+                                href="tel:+14048064448"
+                                className="text-center mt-6 px-6 py-3 md:px-8 md:py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
                                 Tìm Hiểu Thêm
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 hidden md:flex justify-center">
@@ -221,10 +229,12 @@ const MerchantService = () => {
                         <li>✔ Nhận tiền vào ngày tiếp theo</li>
                         <li>✔ Không Cần Thanh Toán Trước</li>
                     </ul>
-                    <div className="w-full md:w-1/3">
-                        <div className="text-center mt-6 px-6 md:px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
+                    <div className="w-full mt-10 md:w-1/2">
+                        <a
+                            href="tel:+14048064448"
+                            className="text-center mt-6 px-6 md:px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
                             Tìm Hiểu Thêm
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -244,10 +254,12 @@ const MerchantService = () => {
                         <div className="text-black text-base md:text-lg font-medium px-2 md:px-0">
                             <span className="text-blue-800 font-extrabold">Surcharge</span> là khoản phí khách hàng phải trả khi họ thanh toán bằng thẻ credit card, để bù đắp cho chi phí xử lý thẻ tín dụng của tiệm. Khi khách hàng sử dụng thẻ debit card, thì chi phí xử lý thẻ tín dụng thường được chủ tiệm chịu, không phải khách hàng.
                         </div>
-                        <div className="w-full md:w-1/2">
-                            <div className="text-center mt-6 px-6 md:px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
+                        <div className="w-full mt-5 md:w-1/2">
+                            <a
+                                href="tel:+14048064448"
+                                className="text-center mt-6 px-6 md:px-8 py-3 bg-blue-900 text-white text-base font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:text-white cursor-pointer transition duration-300">
                                 Tìm Hiểu Thêm
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div className="w-full hidden md:w-1/2 md:flex justify-center">

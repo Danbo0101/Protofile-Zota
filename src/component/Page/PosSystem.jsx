@@ -32,9 +32,9 @@ const PosSystem = () => {
                 <img
                     src={bgPosSystem}
                     alt="Background"
-                    className="w-full h-[80vh] lg:h-[180vh] object-cover rounded-2xl"
+                    className="w-full h-[70vh] lg:h-[180vh] object-cover rounded-2xl"
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-5">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center md:mt-24 text-white px-5">
                     <div className="w-full max-w-2xl flex flex-col gap-5">
                         <div className="text-sm lg:text-base font-serif">
                             SALON SOFTWARE
@@ -43,15 +43,19 @@ const PosSystem = () => {
                             Phần mềm tốt nhất cho salon hiện nay
                         </div>
                         <div className="flex flex-col justify-center sm:flex-row gap-5 mt-10">
-                            <button className="bg-pink-400 px-6 py-3 rounded-2xl font-extrabold hover:bg-blue-900 cursor-pointer">
+                            <a
+                                href="tel:+14048064448"
+                                className="bg-pink-400 px-6 py-3 rounded-2xl font-extrabold hover:bg-blue-900 cursor-pointer">
                                 Get Started
-                            </button>
-                            <button className="border-2 border-pink-400 bg-white text-black px-6 py-3 rounded-2xl font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
+                            </a>
+                            <a
+                                href="tel:+14048064448"
+                                className="border-2 border-pink-400 bg-white text-black px-6 py-3 rounded-2xl font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
                                 Check Pricing
-                            </button>
+                            </a>
                         </div>
                     </div>
-                    <img src={PosSystem21} className="w-3/4 lg:w-auto mt-10 lg:mt-20" />
+                    <img src={PosSystem21} className="w-3/4 lg:w-auto mt-10 " />
                 </div>
             </div>
 
@@ -68,9 +72,11 @@ const PosSystem = () => {
                         Khi làm việc trên màn hình lớn và sắc nét, các thông tin và ứng dụng cần thiết sẽ được sắp xếp và hiển thị rõ ràng cùng một lúc, giúp bạn thao tác dễ dàng, linh hoạt hơn. Ngoài ra, màn hình lớn còn giúp bạn rút ngắn được nhiều công đoạn khi cần chỉnh sửa hoặc bổ sung cho hóa đơn.
                     </div>
                     <img src={posSystem1} className="md:hidden w-full max-w-[600px] object-cover" />
-                    <div className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
+                    <a
+                        href="tel:+14048064448"
+                        className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
                         Get Started
-                    </div>
+                    </a>
                 </div>
                 <img src={posSystem1} className="w-full hidden md:block max-w-[600px] object-cover" />
             </div>
@@ -85,9 +91,12 @@ const PosSystem = () => {
                         ZOTA hiểu rõ việc chia turn công bằng là một trong những mối quan tâm hàng đầu của mỗi người chủ, nên đã phát triển tính năng chia turn tự động. Ưu điểm của tính năng này là khả năng lập trình cụ thể, có thể đáp ứng theo cách thức sinh hoạt riêng biệt của mỗi tiệm nails.
                     </div>
                     <img src={posTurn} className="md:hidden w-full max-w-[600px] object-cover" />
-                    <div className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
+                    <a
+                        href="tel:+14048064448"
+                        className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
                         Get Started
-                    </div>
+                    </a>
+
                 </div>
             </div>
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center py-10 px-5 rounded-2xl shadow-2xl" data-aos="fade-left">
@@ -99,9 +108,11 @@ const PosSystem = () => {
                         Để quý khách bớt đi một mối lo lắng, ZOTA đã tối ưu hoá phần mềm tính lương tự động, giúp tính toán chính xác mọi cách tính lương từ cơ bản đến phức tạp (theo ngày, giờ, tháng, hay theo sản phẩm), và in báo cáo chỉ với một thao tác đơn giản trên màn hình POS.
                     </div>
                     <img src={posPayroll} className="md:hidden w-full max-w-[600px] object-cover" />
-                    <div className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
+                    <a
+                        href="tel:+14048064448"
+                        className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
                         Get Started
-                    </div>
+                    </a>
                 </div>
                 <img src={posPayroll} className="w-full hidden md:block max-w-[600px] object-cover" />
             </div>
@@ -116,9 +127,11 @@ const PosSystem = () => {
                         Hệ thống đặt hẹn online của ZOTA hoạt động và cập nhật 24/7, giúp khách hàng đặt hẹn mọi lúc mọi nơi dễ dàng. Chi tiết mỗi cuộc hẹn sẽ tự động cập nhật về máy POS và hiển thị theo trình tự nên bạn không cần phải sắp xếp qua điện thoại, đồng thời giảm thiểu tình trạng trùng lịch hẹn. Ngoài ra, tính năng đặt hẹn online của chúng tôi còn có thể sáp nhập dữ liệu, giúp thu hút thêm khách hàng tiềm năng.
                     </div>
                     <img src={posAppointment} className="md:hidden w-full max-w-[600px] object-cover" />
-                    <div className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
+                    <a
+                        href="tel:+14048064448"
+                        className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
                         Get Started
-                    </div>
+                    </a>
                 </div>
             </div>
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center py-10 px-5 rounded-2xl shadow-2xl" data-aos="fade-left">
@@ -132,9 +145,11 @@ const PosSystem = () => {
                         và cập nhật liên lạc thông tin của Khách hàng một cách liên tục.
                     </div>
                     <img src={posCheckIn} className="md:hidden w-full max-w-[600px] object-cover" />
-                    <div className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
+                    <a
+                        href="tel:+14048064448"
+                        className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
                         Get Started
-                    </div>
+                    </a>
                 </div>
                 <img src={posCheckIn} className="w-full hidden md:block max-w-[600px] object-cover" />
             </div>
@@ -149,9 +164,11 @@ const PosSystem = () => {
                         Cho phép khách dùng chữ ký điện tử khi thanh toán bằng thẻ tín dụng, giảm thiểu việc sử dụng giấy, giúp chủ không những tiết kiệm tiền, thời gian mà còn bảo vệ môi trường. Ngoài ra, bảng chữ ký điện tử còn khuyến khích khách cho tips mà không cần thu ngân phải mở lời.
                     </div>
                     <img src={posSign} className="md:hidden w-full max-w-[600px] object-cover" />
-                    <div className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
+                    <a
+                        href="tel:+14048064448"
+                        className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
                         Get Started
-                    </div>
+                    </a>
                 </div>
             </div>
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 justify-center items-center py-10 px-5 rounded-2xl shadow-2xl" data-aos="fade-left">
@@ -165,9 +182,11 @@ const PosSystem = () => {
                         Đồng thời, ZOMO còn có tính năng tính toán tự động những khoản hoa hồng và tiền tips của thợ một cách chính xác nhất.
                     </div>
                     <img src={zomoApp} className="md:hidden w-full max-w-[600px] object-cover" />
-                    <div className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
+                    <a
+                        href="tel:+14048064448"
+                        className="w-full sm:w-1/2 mx-auto lg:mx-0 text-white font-sans font-extrabold bg-gradient-to-br from-blue-500 to-pink-600 hover:bg-gradient-to-bl hover:text-pink-200 focus:ring-4 focus:outline-none rounded-lg text-lg py-2.5 text-center cursor-pointer">
                         Get Started
-                    </div>
+                    </a>
                 </div>
                 <img src={zomoApp} className="w-full hidden md:block max-w-[600px] object-cover" />
             </div>

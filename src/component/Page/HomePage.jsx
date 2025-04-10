@@ -129,12 +129,16 @@ const HomePage = () => {
                                 ></iframe>
                             </div>
                             <div className="flex justify-center gap-4 sm:gap-8 mt-4">
-                                <button className="bg-pink-400 px-6 sm:px-8 py-2 rounded-2xl text-lg font-sans font-extrabold hover:bg-blue-900 cursor-pointer">
+                                <a
+                                    href="tel:+14048064448"
+                                    className="bg-pink-400 px-6 sm:px-8 py-2 rounded-2xl text-lg font-sans font-extrabold hover:bg-blue-900 cursor-pointer">
                                     Get Started
-                                </button>
-                                <button className="border-2 border-pink-400 bg-white text-black px-6 sm:px-8 py-2 rounded-2xl text-lg font-sans font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
+                                </a>
+                                <a
+                                    href="tel:+14048064448"
+                                    className="border-2 border-pink-400 bg-white text-black px-6 sm:px-8 py-2 rounded-2xl text-lg font-sans font-extrabold hover:bg-pink-400 hover:text-white cursor-pointer">
                                     Check Pricing
-                                </button>
+                                </a>
                             </div>
                         </div>
                         <div className="w-full hidden sm:block md:max-w-4xl lg:max-w-4xl">

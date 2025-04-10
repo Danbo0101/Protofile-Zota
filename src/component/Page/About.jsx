@@ -66,9 +66,9 @@ const About = () => {
 
     return (
         <div className="w-full px-5 pb-10 bg-white">
-            <div className="relative w-full min-h-[600px] lg:min-h-screen overflow-hidden rounded-2xl shadow-2xl p-4" data-aos="fade-up">
+            <div className="relative w-full min-h-[600px] lg:min-h-[100vh] overflow-hidden rounded-2xl shadow-2xl p-4" data-aos="fade-up">
                 <img src={bgAbout} alt="bgAbout" className="absolute inset-0 w-full h-full object-cover blur-sm" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 gap-5">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center  px-4 gap-5">
                     <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-serif font-bold mt-1 sm:mt-2 md:mt-4 lg:mt-6">
                         Welcome to <span className="text-pink-400">ZOTA</span>
                     </h1>
@@ -123,15 +123,17 @@ const About = () => {
                         tâm và đam mê với công nghệ, anh đã thành lập Zota - một hệ sinh thái
                         công nghệ đầu tiên dành riêng cho ngành nails...
                     </p>
-
-                    {/* Nút bấm */}
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-4 sm:mt-6">
-                        <button className="w-full sm:w-auto bg-pink-400 px-8 py-3 rounded-2xl text-base font-extrabold text-white shadow-md hover:bg-blue-900 transition-all duration-300">
+                        <a
+                            href="tel:+14048064448"
+                            className="w-full sm:w-auto bg-pink-400 px-8 py-3 rounded-2xl text-base font-extrabold text-white shadow-md hover:bg-blue-900 transition-all duration-300">
                             Get Started
-                        </button>
-                        <button className="w-full sm:w-auto border-2 border-pink-400 bg-white text-black px-8 py-3 rounded-2xl text-base font-extrabold hover:bg-pink-400 hover:text-white transition-all duration-300">
+                        </a>
+                        <a
+                            href="tel:+14048064448"
+                            className="w-full sm:w-auto border-2 border-pink-400 bg-white text-black px-8 py-3 rounded-2xl text-base font-extrabold hover:bg-pink-400 hover:text-white transition-all duration-300">
                             Check Pricing
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
