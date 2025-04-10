@@ -10,8 +10,23 @@ import { IconButton } from '@mui/material';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { sendEmail } from "../../utils/sendEmail";
+import { toast } from "react-toastify";
 
 const Footer = () => {
+
+    const handleSubmit = (e) => {
+        sendEmail(e)
+            .then((result) => {
+                console.log('SUCCESS!', result.text);
+                toast.success('Gửi thành công, chúng tôi sẽ liên hệ với bạn sớm nhất có thể. Xin cám ơn bạn!');
+                e.target.reset();
+            })
+            .catch((error) => {
+                console.log('FAILED...', error.text);
+                toast.error('Gửi thất bại, vui lòng thử lại sau.');
+            });
+    };
 
     useEffect(() => {
         AOS.init({ duration: 2000 });
@@ -26,23 +41,60 @@ const Footer = () => {
                     <div className="text-center text-2xl lg:text-3xl text-pink-600 font-bold">
                         Liên Hệ Với Chúng Tôi <br /> Tư Vấn Miễn Phí!
                     </div>
-                    <div className="mt-6 flex flex-col gap-5 w-full">
-                        <TextField fullWidth label="Name*" placeholder="Your name" variant="filled" />
-                        <TextField fullWidth label="Last name" placeholder="Your last name" variant="filled" />
-                        <TextField fullWidth label="Your email*" placeholder="Your email address" type="email" variant="filled" />
-                        <TextField fullWidth label="Message*" placeholder="Enter your message" multiline rows={4} variant="filled" />
-                        <Box className="flex justify-center">
-                            <Button
-                                variant="outlined"
-                                color="primary"
-                                className="bg-pink-400 hover:bg-blue-900 text-white w-full py-4 rounded-full"
-                                type="submit"
-                                endIcon={<SendIcon />}
-                            >
-                                Submit
-                            </Button>
-                        </Box>
-                    </div>
+                    <form onSubmit={handleSubmit} className="w-full">
+
+                        <input type="hidden" name="time" id="time" />
+
+                        <div className="mt-6 flex flex-col gap-5 w-full">
+                            <TextField
+                                fullWidth
+                                label="Name*"
+                                placeholder="Your name"
+                                name="user_name"
+                                variant="filled"
+                                required
+                            />
+                            <TextField
+                                fullWidth
+                                label="Your phone number*"
+                                placeholder="Your phone number"
+                                name="phone_number"
+                                variant="filled"
+                                type="tel"
+                                required
+                            />
+                            <TextField
+                                fullWidth
+                                label="Your email*"
+                                placeholder="Your email address"
+                                name="user_email"
+                                type="email"
+                                variant="filled"
+                                required
+                            />
+                            <TextField
+                                fullWidth
+                                label="Message*"
+                                placeholder="Enter your message"
+                                name="message"
+                                multiline
+                                rows={4}
+                                variant="filled"
+                                required
+                            />
+                            <Box className="flex justify-center">
+                                <Button
+                                    variant="outlined"
+                                    color="primary"
+                                    className="bg-pink-400 hover:bg-blue-900 text-white w-full py-4 rounded-full"
+                                    type="submit"
+                                    endIcon={<SendIcon />}
+                                >
+                                    Submit
+                                </Button>
+                            </Box>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div className="text-black flex flex-col mt-32 lg:mt-0 lg:flex-row p-5 lg:p-10 gap-10">
@@ -87,8 +139,8 @@ const Footer = () => {
                     >Credit card processing</a>
                     <a className="italic">Marketing</a>
                     <a
-
-                        className="italic "
+                        href="/website"
+                        className="italic underline hover:text-pink-500"
                     >
                         Website</a>
                     <a

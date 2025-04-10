@@ -17,6 +17,7 @@
     "@react-google-maps/api": "^2.20.6",
     "@tailwindcss/vite": "^4.0.12",
     "aos": "^2.3.4",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.4.11",
     "lucide-react": "^0.479.0",
     "react": "^19.0.0",

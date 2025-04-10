@@ -22,7 +22,8 @@ const Header = () => {
         { path: '/pos-system', label: 'POS SYSTEM' },
         { path: '/merchant-service', label: 'MERCHANT SERVICES' },
         { path: '/templates', label: 'TEMPLATES' },
-        { path: '/about', label: 'ABOUT US' }
+        { path: '/about', label: 'ABOUT US' },
+        { path: '/website', label: 'WEBSITE' }
     ];
 
     return (
