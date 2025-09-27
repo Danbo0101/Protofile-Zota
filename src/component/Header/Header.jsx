@@ -22,13 +22,13 @@ const Header = () => {
         { path: '/pos-system', label: 'POS SYSTEM' },
         { path: '/merchant-service', label: 'MERCHANT SERVICES' },
         { path: '/templates', label: 'TEMPLATES' },
-        { path: '/about', label: 'ABOUT US' },
-        { path: '/website', label: 'WEBSITE' }
+        { path: '/website', label: 'WEBSITE DESIGN' },
+        { path: '/about', label: 'ABOUT US' }
     ];
 
     return (
         <div className="bg-white shadow-md">
-            <div className="py-4 flex justify-between items-center px-6 md:px-12">
+            <div className="py-4 flex justify-between items-center px-6 md:px-8">
                 <img
                     src={logo}
                     alt="ZOTA"
@@ -43,7 +43,7 @@ const Header = () => {
                             className={`${location.pathname === item.path
                                 ? "text-pink-500 underline"
                                 : "text-black"
-                                } font-normal no-underline hover:underline hover:text-pink-500`}
+                                } font-normal  no-underline hover:underline hover:text-pink-500`}
                             style={{ textUnderlineOffset: "6px" }}
                         >
                             {item.label}
@@ -61,9 +61,9 @@ const Header = () => {
                     <IconButton onClick={() => window.open("https://www.facebook.com/ZotaByThoNguyenDPS/", "_blank")}>
                         <FacebookIcon className="text-blue-600" sx={{ fontSize: 30 }} />
                     </IconButton>
-                    <IconButton>
+                    {/* <IconButton>
                         <YouTubeIcon className="text-red-600" sx={{ fontSize: 30 }} />
-                    </IconButton>
+                    </IconButton> */}
                     <a
                         href="tel:+14048064448"
                         className="ml-4 font-bold text-sm bg-gradient-to-r from-[#EA4999] to-[#FF99CC] px-6 py-3 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
@@ -105,9 +105,9 @@ const Header = () => {
                         <IconButton onClick={() => window.open("https://www.facebook.com/ZotaByThoNguyenDPS/", "_blank")}>
                             <FacebookIcon className="text-blue-600" sx={{ fontSize: 30 }} />
                         </IconButton>
-                        <IconButton>
+                        {/* <IconButton>
                             <YouTubeIcon className="text-red-600" sx={{ fontSize: 30 }} />
-                        </IconButton>
+                        </IconButton> */}
                     </div>
                     <a
                         href="tel:+14048064448"

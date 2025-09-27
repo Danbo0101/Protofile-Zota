@@ -9,6 +9,9 @@ import website2 from "../../assets/Image/website2.png";
 import website3 from "../../assets/Image/website3.png";
 import website4 from "../../assets/Image/website4.png";
 import website5 from "../../assets/Image/website5.png";
+import website6 from "../../assets/Image/website6.png";
+import website7 from "../../assets/Image/website7.png";
+import website8 from "../../assets/Image/website8.png";
 
 const pinkTheme = createTheme({
     palette: {
@@ -24,14 +27,14 @@ const Website = () => {
     const cardsPerPage = 6;
 
     const cardData = [
-        { id: 1, image: website1, link: "https://danbo.zotapossystem.com/template-1" },
-        { id: 2, image: website2, link: "https://danbo.zotapossystem.com/template-2" },
-        { id: 3, image: website3, link: "https://danbo.zotapossystem.com/template-3" },
-        { id: 4, image: website4, link: "https://danbo.zotapossystem.com/template-4" },
-        { id: 5, image: website5, link: "https://danbo.zotapossystem.com/template-5" },
-        // { id: 6, image: website1, link: "https://example.com/nail6" },
-        // { id: 7, image: website1, link: "https://example.com/nail7" },
-        // { id: 8, image: website1, link: "https://example.com/nail8" },
+        { id: 1, image: website8, link: "https://danbo.zotapossystem.com/template-8" },
+        { id: 2, image: website1, link: "https://danbo.zotapossystem.com/template-1" },
+        { id: 3, image: website2, link: "https://danbo.zotapossystem.com/template-2" },
+        { id: 4, image: website3, link: "https://danbo.zotapossystem.com/template-3" },
+        { id: 5, image: website4, link: "https://danbo.zotapossystem.com/template-4" },
+        { id: 6, image: website5, link: "https://danbo.zotapossystem.com/template-5" },
+        { id: 7, image: website7, link: "https://danbo.zotapossystem.com/template-7" },
+        { id: 8, image: website6, link: "https://danbo.zotapossystem.com/template-6" },
         // { id: 9, image: website1, link: "https://example.com/nail9" },
         // { id: 10, image: website1, link: "https://example.com/nail10" },
         // { id: 11, image: website1, link: "https://example.com/nail11" },
@@ -83,7 +86,7 @@ const Website = () => {
                                         }
                                     />
                                     <a href={item.link} target="_blank" rel="noopener noreferrer">
-                                        <button className="mt-4 bg-pink-500 text-white hover:bg-pink-600 px-5 py-2 rounded-full shadow-md transition duration-300">
+                                        <button className="mt-4 bg-pink-500 text-white hover:bg-pink-600 px-5 py-2 rounded-full shadow-md transition duration-300 cursor-pointer">
                                             Xem chi tiết
                                         </button>
                                     </a>
